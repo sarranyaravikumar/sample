@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sarranya's Website - Login</title>
+    <title>Sarranya's Website</title>
 
     <style>
         body {
             background-color: #eaf4ff;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 80px;
+            padding-top: 100px;
         }
 
-        .login-box {
+        .search-box {
             background-color: white;
-            width: 350px;
+            width: 550px;
             margin: auto;
-            padding: 35px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
@@ -24,24 +24,29 @@
             color: #2563eb;
         }
 
-        h2 {
-            color: #7c3aed;
+        p {
+            color: #555;
         }
 
-        input {
-            width: 85%;
-            padding: 12px;
-            margin: 10px;
+        input[type="text"] {
+            width: 80%;
+            padding: 14px;
             border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 25px;
             font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2563eb;
         }
 
         button {
+            margin-top: 15px;
+            padding: 12px 25px;
             background-color: #2563eb;
             color: white;
             border: none;
-            padding: 12px 30px;
             border-radius: 8px;
             font-size: 16px;
             cursor: pointer;
@@ -55,20 +60,25 @@
 
 <body>
 
-    <div class="login-box">
+    <div class="search-box">
 
         <h1>Hello! This is Sarranya.</h1>
 
-        <h2>Login</h2>
+        <p>Enter your message below:</p>
 
-        <form>
-            <input type="text" placeholder="Username" required>
+        <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+
+            <input
+                type="text"
+                name="message"
+                placeholder="Type something..."
+                required
+            >
+
             <br>
 
-            <input type="password" placeholder="Password" required>
-            <br>
+            <button type="submit">Submit</button>
 
-            <button type="submit">Login</button>
         </form>
 
     </div>
